@@ -1,0 +1,121 @@
+.tarjeta-curso {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.tarjeta-curso::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.tarjeta-curso:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.tarjeta-curso:hover::before {
+  opacity: 1;
+}
+
+.tarjeta-curso__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tarjeta-curso__nivel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.tarjeta-curso__cupo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.tarjeta-curso__titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.35;
+}
+
+.tarjeta-curso__profesor {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin: 0 0 0.75rem 0;
+}
+
+.tarjeta-curso__profesor strong {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.tarjeta-curso__descripcion {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tarjeta-curso__footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tarjeta-curso__btn-detalle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.tarjeta-curso__btn-detalle:hover {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+  transform: translateY(-1px);
+}

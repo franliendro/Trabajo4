@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bg-color: #0b0f19;
+  --bg-gradient: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
+                     radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-primary: #6366f1;
+  --accent-hover: #4f46e5;
+  --card-bg: rgba(30, 41, 59, 0.6);
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+}

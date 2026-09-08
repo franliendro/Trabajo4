@@ -1,0 +1,109 @@
+.pagina-cursos {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+.cursos-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.5rem;
+}
+
+.cursos-titulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+.cursos-subtitulo {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.grilla-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Estado de Carga */
+.estado-cargando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  color: #94a3b8;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(99, 102, 241, 0.2);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: girar 0.9s linear infinite;
+  margin-bottom: 1.25rem;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estado de Error */
+.estado-error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 550px;
+  margin: 2rem auto;
+}
+
+.error-icono {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.estado-error h3 {
+  color: #f87171;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.error-mensaje {
+  color: #fca5a5;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.btn-reintentar {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-reintentar:hover {
+  background: #dc2626;
+}
+
+/* Estado Vacío */
+.estado-vacio {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
